@@ -1,0 +1,10 @@
+[gd_resource type="Environment" format=3 uid="uid://c2vf8m28v34d"]
+
+[ext_resource type="Material" uid="uid://bouku1hxpib12" path="res://Worlds/Tutoria/HappySky.tres" id="1_swq52"]
+
+[sub_resource type="Sky" id="Sky_lt7rw"]
+sky_material = ExtResource("1_swq52")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_lt7rw")

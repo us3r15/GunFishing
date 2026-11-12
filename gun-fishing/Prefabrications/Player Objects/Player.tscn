@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://dsyknwtljs1tk"]
+
+[ext_resource type="Script" uid="uid://dgsyued5cxja" path="res://Scrips/PlayerMovement.cs" id="1_xhfnw"]
+[ext_resource type="Script" uid="uid://b8ttlrvnrlj4c" path="res://Scrips/Verticalise.cs" id="2_ryon3"]
+[ext_resource type="PackedScene" uid="uid://nf6as0j1kgv2" path="res://Prefabrications/Player Objects/gunhands/LeGun.tscn" id="3_ryon3"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_2e7qe"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ep28e"]
+
+[node name="PlayerCharacterBody" type="CharacterBody3D" unique_id=474284019]
+script = ExtResource("1_xhfnw")
+
+[node name="PlayerCollider" type="CollisionShape3D" parent="." unique_id=1627254130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("SphereShape3D_2e7qe")
+
+[node name="Camera3D" type="Camera3D" parent="PlayerCollider" unique_id=1771151502]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("2_ryon3")
+
+[node name="LeGun" parent="PlayerCollider/Camera3D" unique_id=269786869 instance=ExtResource("3_ryon3")]
+transform = Transform3D(0.9986295, 0, -0.05233596, 0, 1, 0, 0.05233596, 0, 0.9986295, 0.064976335, -0.53980666, -1.158127)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="PlayerCollider/Camera3D" unique_id=1737342105]
+
+[node name="Control" type="Control" parent="PlayerCollider/Camera3D/CanvasLayer" unique_id=1282875816]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="PlayerCollider/Camera3D/CanvasLayer/Control" unique_id=814941390]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HeadArea" type="StaticBody3D" parent="PlayerCollider" unique_id=748316615]
+
+[node name="HeadCollider" type="CollisionShape3D" parent="PlayerCollider/HeadArea" unique_id=138257809]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("SphereShape3D_ep28e")

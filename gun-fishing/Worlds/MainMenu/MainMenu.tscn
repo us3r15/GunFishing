@@ -1,0 +1,123 @@
+[gd_scene format=4 uid="uid://evj87hahysd4"]
+
+[ext_resource type="Texture2D" uid="uid://bsbjgscyloaof" path="res://Worlds/MainMenu/Table.png" id="1_d422u"]
+[ext_resource type="PackedScene" uid="uid://bm4yqonpcdmox" path="res://Prefabrications/Player Objects/gunhands/JustGun.tscn" id="3_e0efn"]
+[ext_resource type="Script" uid="uid://dil1cgiaevvf0" path="res://Worlds/MainMenu/NewGame.cs" id="4_tvhx4"]
+[ext_resource type="Texture2D" uid="uid://nnnucydfbonm" path="res://Logo.png" id="5_tvhx4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dw1ps"]
+albedo_color = Color(0.8615747, 0.89992076, 1.540184e-06, 1)
+metallic_specular = 0.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0c04o"]
+size = Vector2(25, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6xr4h"]
+albedo_texture = ExtResource("1_d422u")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ep28e"]
+size = Vector2(5, 7)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7olv2"]
+load_path = "res://.godot/imported/JustGun_0.png-2f7c6e05fad79ce329fb14f2ba4408df.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rcc1h"]
+resource_name = "material_0"
+cull_mode = 2
+albedo_texture = SubResource("CompressedTexture2D_7olv2")
+texture_filter = 0
+texture_repeat = false
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3wsn8"]
+_surfaces = [{
+"aabb": AABB(-0.109375, 0.05625, -0.109375, 0.21875, 0.88750005, 0.21875),
+"format": 34896613377,
+"index_count": 192,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAAAEAAEABQAAAAIABAAGAAEABwAEAAAAAQAGAAgAAQAIAAMABAAJAAYACgAAAAUACgAHAAAABwALAAQACwAJAAQADAAHAAoADQALAAcADAANAAcADQAOAAsACwAPAAkADgAPAAsADwAFAAkADwAKAAUACQAFABAACQAQAAYABQACABAAEQAKAA8ADgARAA8AEQAMAAoABgAQABIAEAACABMAEAATABIAAgADABMABgASAAgAFAAMABEAEwADABUAEgATABYAEwAVABYACAASABcAEgAWABcAAwAIABgAAwAYABUACAAXABgAFgAVABkAFwAWABoAFgAZABoAGAAXABsAFwAaABsAFQAYABwAFQAcABkAGAAbABwAGQAcABQAGgAZAB0AGQAUAB0AHQAUABEAHQARAA4AHAAeABQAHAAbAB4AFAAeAAwAHgANAAwAHwAdAA4AHwAOAA0AHgAfAA0AGwAfAB4AGgAdAB8AGwAaAB8A"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("BLUAAP//AAD/////BLUAAP//AAAEtQAA//////pKAAAEtf////8AACGsAACK6gAAiur//yGsAAD6SgAA//8AAIrq///dUwAAIaz//4rqAADdUwAAiuoAAPpK/////wAAdBUAACGsAAAAAAAABLUAAAAA//8EtQAA3VP//4rqAACK6gAAIawAAHQV//8hrAAAiuoAAN1TAAD//wAA+koAAHQV///dUwAABLX//wAAAAAEtQAAAAAAACGsAAB0FQAAIaz//3QVAAD6Sv//AAAAAPpKAAAAAAAA3VMAAHQVAADdU///dBUAAAAA///6SgAAdBUAAN1TAAAAAAAA+koAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tvhx4"]
+resource_name = "Sketchfab_Scene_Object_20"
+_surfaces = [{
+"aabb": AABB(-0.109375, 0.05625, -0.109375, 0.21875, 0.88750005, 0.21875),
+"attribute_data": PackedByteArray("/w//yf8Q/7v/EP/J/w//u/8S/7v/Ef/J/xH/u/8S/8mZwspEv8OGRXTDpUW/w/lGuMJ/RHTD2kZkwcpEuML/R0XBf0SZwrRHisClRUXB/0c/wIZFZMG0R4rA2kY/wPlGuMJ/THTDWku/w3lLdMMlSpnCNEy/wwZKRcF/TJnCSklkwTRMuML/SD/AeUtkwUpJisBaS0XB/0g/wAZKisAlSv+6/7L/u/+k/7v/sv+6/6T/u/+z/7r/wf+6/7P/u//B/xP/yf8U/7v/FP/J/xP/u/8W/7v/Ff/J/xX/u/8W/8kAAP/J/wD/u/8A/8kAAP+7/wL/u/8B/8n/Af+7/wL/yf8X/8n/GP+7/xj/yf8X/7v/Gv+7/xn/yf8Z/7v/Gv/J/wP/yf8E/7v/BP/J/wP/u/8M/7v/C//J/wv/u/8M/8n/G//J/xz/u/8c/8n/G/+7/x7/u/8d/8n/Hf+7/x7/yf8N/8n/Dv+7/w7/yf8N/7v/vP8O/7v/HP+7/w7/vP8c"),
+"format": 34896613399,
+"index_count": 192,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACgAJAAsACAAMAAkACgALAA0ADgAMAAgADQALAA8ADgAQAAwADQAPABEAEgAQAA4AEQAPABMAEgAUABAAEQATABUAFgAUABIAFQATABcAFgAXABQAFQAXABYAGAAZABoAGgAZABsAGAAcABkAGgAbAB0AHgAcABgAHQAbAB8AHgAgABwAHQAfACEAIgAgAB4AIQAfACMAIgAkACAAIQAjACUAJgAkACIAJQAjACcAJgAnACQAJQAnACYAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQABDAEEARABFAEYARABHAEUASABJAEoASABLAEkATABNAE4ATABPAE0AUABRAFIAUABTAFEAVABVAFYAVABXAFUAWABZAFoAWABbAFkAXABdAF4AXABfAF0A"),
+"material": SubResource("StandardMaterial3D_rcc1h"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 96,
+"vertex_data": PackedByteArray("BLUAAP///5//////BLX/n///AAAEtf+fBLX//////58hrP//iur/34rqAAAhrP/fiur//yGs/98hrAAAiur/3yGsAACK6v+///8AAAS1/7+K6gAAIaz/v///AAD6Sv+/BLUAAP///7+K6gAA3VP/v91TAACK6v+/BLUAAAAA/7/6SgAA////vyGsAAB0Ff+/dBUAACGs/7/6SgAAAAD/vwAAAAAEtf+/3VMAAHQV/790FQAA3VP/vwAAAAD6Sv+/BLX//////7+K6v//Iaz/v/////8Etf+/iur//91T/78hrP//iur/v//////6Sv+/+kr//////78hrP//dBX/v91T//+K6v+/BLX//wAA/78AAP//BLX/v91T//90Ff+/dBX//yGs/7/6Sv//AAD/vwAA///6Sv+/dBX//91T/7///wAABLX/v//////6Sv+///8AAPpK/7//////BLX/v4rq//8hrP+/iuoAAN1T/7+K6v//3VP/v4rqAAAhrP+///8AAPpK/98Etf//AAD/3wS1AAAAAP/f//////pK/9+K6v//3VP/nyGsAAB0Ff+fIaz//3QV/5+K6gAA3VP/nwS1AAAAAP//+kr//wAA///6SgAAAAD//wS1//8AAP//Iaz//3QVAIDdUwAAdBUAgN1T//90FQCAIawAAHQVAID6SgAAAAD/3wAA///6Sv/fAAAAAPpK/9/6Sv//AAD/391T//90Ff+fdBUAAN1T/590Ff//3VP/n91TAAB0Ff+fAAAAAPpK/78AAP//BLX/vwAAAAAEtf+/AAD///pK/790Ff//3VP/v3QVAAAhrP+/dBX//yGs/790FQAA3VP/vwAAAAAEtf+f+kr//////5/6SgAA////nwAA//8Etf+fdBX//yGs/9/dUwAAiur/391T//+K6v/fdBUAACGs/9/6SgAA//8AgAS1/////wCABLUAAP//AID6Sv////8AgN1T//+K6v//IawAAIrq//8hrP//iur//91TAACK6v///38AAP9/AAD/fwAA/38AAP9/////f////3////9///8AAP9/AQD+fwEA/n8AAACAAAD/fwAAAIAAAP9/AAD/fwAA/38AAP9/AAAAgAAA/38AAACAAAD/fwEA/n8BAP5//v//f/7//n/+//5//f8AgP7//3/9/wCA/v//f/7//3/+//9//v//f/3/AID+//9//f8AgP7//3/+//5//v/+f/9/AAD/fwAA/38AAP9/AAD/f////3////9/////f////38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////fwAA/38AAP9/AAD/fwAA/3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f////3////9/////f////38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_3wsn8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tvhx4"]
+albedo_color = Color(1, 0.84313726, 0, 1)
+metallic = 0.5
+metallic_specular = 1.0
+roughness = 0.5
+
+[node name="Node3D" type="Node3D" unique_id=221889320]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1361812684]
+transform = Transform3D(-0.25399807, -0.34649435, 0.90300983, 0, 0.9336284, 0.35824302, -0.96720475, 0.09099304, -0.2371398, 2.869071, 1.6466889, -1.196959)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Camera3D" unique_id=2043836456]
+transform = Transform3D(0.9672047, -0.25399798, -2.89441e-08, -0.09099295, -0.34649423, -0.9336281, 0.23713954, 0.90300965, -0.3582429, -3.477116, 0.7923811, -6.6197467)
+material_override = SubResource("StandardMaterial3D_dw1ps")
+mesh = SubResource("PlaneMesh_0c04o")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D" unique_id=1679904587]
+transform = Transform3D(-0.25399804, -2.2351738e-08, -0.9672047, -0.34649432, 0.9336283, 0.09099302, 0.9030097, 0.35824302, -0.23713978, -0.4309004, -0.42017737, -3.4596612)
+material_override = SubResource("StandardMaterial3D_6xr4h")
+mesh = SubResource("PlaneMesh_ep28e")
+
+[node name="Sketchfab_Scene" parent="Camera3D/MeshInstance3D" unique_id=1699644694 instance=ExtResource("3_e0efn")]
+transform = Transform3D(-0.5931961, -0.805058, -9.092196e-08, -3.171509e-08, -5.2550703e-08, 1.0000001, -0.805058, 0.5931961, -1.8102009e-09, 0.67624265, 0.66295886, -2.4855452)
+
+[node name="Object_52" type="MeshInstance3D" parent="Camera3D/MeshInstance3D/Sketchfab_Scene" unique_id=1752176344]
+transform = Transform3D(-1.0388511e-08, 0.19140048, -0.16082866, -2.0076503e-09, 0.16082866, 0.19140048, 0.25, 9.245017e-09, -5.146018e-09, -0.9182659, 0.09872222, -0.5999999)
+mesh = SubResource("ArrayMesh_tvhx4")
+surface_material_override/0 = SubResource("StandardMaterial3D_tvhx4")
+
+[node name="Object_53" type="MeshInstance3D" parent="Camera3D/MeshInstance3D/Sketchfab_Scene" unique_id=65568017]
+transform = Transform3D(-1.6973756e-08, 0.01711937, -0.24941313, -4.346982e-09, 0.24941313, 0.01711937, 0.25, 5.499097e-09, -1.6636239e-08, -0.6377415, -0.069642305, -0.5999998)
+mesh = SubResource("ArrayMesh_tvhx4")
+surface_material_override/0 = SubResource("StandardMaterial3D_tvhx4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1239241141]
+
+[node name="StartMenu" type="Control" parent="CanvasLayer" unique_id=1408112545]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/StartMenu" unique_id=1949723466]
+layout_mode = 1
+offset_left = 150.0
+offset_top = 315.0
+offset_right = 300.0
+offset_bottom = 369.0
+action_mode = 0
+text = "New Game"
+vertical_icon_alignment = 0
+language = "en_US"
+script = ExtResource("4_tvhx4")
+
+[node name="Logo" type="Sprite2D" parent="CanvasLayer/StartMenu" unique_id=1535887173]
+position = Vector2(100, 74)
+texture = ExtResource("5_tvhx4")
+offset = Vector2(305, 105)

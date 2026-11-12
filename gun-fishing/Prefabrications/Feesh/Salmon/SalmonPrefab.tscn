@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dtg0wu6x6bykg"]
+
+[ext_resource type="Script" uid="uid://bb86o3ki08uco" path="res://Prefabrications/Feesh/FishBehaviors.cs" id="1_8lcot"]
+[ext_resource type="Material" uid="uid://7jrnskj6rey2" path="res://Prefabrications/Feesh/Salmon/SalmonMaterial.tres" id="2_yds2w"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ep28e"]
+lightmap_size_hint = Vector2i(12, 12)
+
+[node name="Node3D" type="Node3D" unique_id=41573286]
+script = ExtResource("1_8lcot")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=619299020]
+transform = Transform3D(-1.0927847e-08, 0.25, -1.0927847e-08, 0, -1.0927847e-08, -0.25, -0.25, -1.0927847e-08, 4.7767137e-16, 0, 0, 0)
+material_override = ExtResource("2_yds2w")
+mesh = SubResource("PlaneMesh_ep28e")

@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://cil2em5bkwrwe"]
+
+[ext_resource type="Environment" uid="uid://c2vf8m28v34d" path="res://Worlds/Tutoria/Oh-sunny-days.tres" id="1_pmtb1"]
+[ext_resource type="Texture2D" uid="uid://cn0gwv4v6625q" path="res://Worlds/Tutoria/Grass.png" id="3_72m48"]
+[ext_resource type="Material" uid="uid://b4y34tin47ilq" path="res://Materials/wall.tres" id="3_cu7qy"]
+[ext_resource type="PackedScene" uid="uid://dsyknwtljs1tk" path="res://Prefabrications/Player Objects/Player.tscn" id="5_4gfpu"]
+
+[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_2e7qe"]
+resource_local_to_scene = true
+resource_name = "WorldHeightMap"
+map_width = 20
+map_depth = 20
+map_data = PackedFloat32Array(5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 0, 0, 0, 0, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 6, 0, 0, 0, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 6, 0, 0, 0, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 6, 0, 0, 0, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 6, 0, 0, 0, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ep28e"]
+subdivide_width = 10
+subdivide_depth = 10
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kh4dr"]
+transparency = 1
+shading_mode = 2
+albedo_color = Color(0.015686275, 0, 1, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_i5c4a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pmtb1"]
+albedo_texture = ExtResource("3_72m48")
+
+[node name="root" type="Node3D" unique_id=1820896559]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=990596365]
+
+[node name="WorldHeightMap" type="CollisionShape3D" parent="StaticBody3D" unique_id=903665855]
+shape = SubResource("HeightMapShape3D_2e7qe")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="StaticBody3D" unique_id=615089356]
+environment = ExtResource("1_pmtb1")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="StaticBody3D/WorldEnvironment" unique_id=558044565]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 9.290737, 0)
+
+[node name="FishingArea" type="MeshInstance3D" parent="StaticBody3D" unique_id=530872227]
+transform = Transform3D(-1.6667828e-07, 0, -2.7690158, 0, 1.3956116, 0, 3.8131547, 0, -1.2103753e-07, -3.0211654, -0.020255685, 3.6085324)
+transparency = 0.65
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_ep28e")
+surface_material_override/0 = SubResource("StandardMaterial3D_kh4dr")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="StaticBody3D" unique_id=75868481]
+transform = Transform3D(12.541412, 2.842171e-14, 3.3881318e-21, 0, -4.3711527e-08, 2.7546136, 0, -10.436724, -1.256661e-06, 0.6486876, 2.3119211, 9.489351)
+material_override = ExtResource("3_cu7qy")
+mesh = SubResource("PlaneMesh_i5c4a")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="StaticBody3D" unique_id=515009249]
+transform = Transform3D(-4.5230752e-07, 8.649373e-07, 9.876822, -2.8941367, -1.6503878e-07, -1.1602518e-07, 1.215789e-06, 0.35525176, 3.2035737e-07, 0.6900306, 2.106051, -9.518307)
+material_override = ExtResource("3_cu7qy")
+mesh = SubResource("PlaneMesh_i5c4a")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="StaticBody3D" unique_id=1573487973]
+transform = Transform3D(1.403978, 11.965665, -1.3455605e-06, 1.5392122e-07, 3.2544628e-07, 3.3759687, 1.390846, -1.1683627, -1.7921087e-06, -8.889065, 2.6858053, 1.0833838)
+material_override = ExtResource("3_cu7qy")
+mesh = SubResource("PlaneMesh_i5c4a")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="StaticBody3D" unique_id=596979763]
+transform = Transform3D(-2.0488248e-07, 12.541457, -1.0810269e-06, 0, 3.7378757e-07, 3.2873232, -3.9005687, -4.5620538e-07, -1.3944818e-06, -7.498026, 2.7536502, 6.351098)
+material_override = ExtResource("3_cu7qy")
+mesh = SubResource("PlaneMesh_i5c4a")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="StaticBody3D" unique_id=1528462592]
+transform = Transform3D(6.168525e-07, -0.0025471833, 0.5791706, -3.1563363, -1.5523118e-06, 5.5951095e-06, -1.1877912e-05, 0.7251082, 0.72213936, 9.062164, 1.8277006, -0.86374044)
+material_override = ExtResource("3_cu7qy")
+mesh = SubResource("PlaneMesh_i5c4a")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="StaticBody3D" unique_id=1075084406]
+transform = Transform3D(2.371495e-05, -0.336199, 1.3105634e-07, 4.2050046e-06, -3.965581e-07, -2.6358943, 6.330397, 4.8783757e-08, 1.1684398e-06, 8.498636, 2.3889966, -7.8414626)
+material_override = ExtResource("3_cu7qy")
+mesh = SubResource("PlaneMesh_i5c4a")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="StaticBody3D" unique_id=1766382205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00049999356, 0)
+material_override = SubResource("StandardMaterial3D_pmtb1")
+size = Vector3(25, 0.001, 20)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="StaticBody3D/CSGBox3D" unique_id=1767309767]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4812303, 0, 3.4741118)
+operation = 2
+size = Vector3(4, 1, 6)
+
+[node name="PlayerCharacterBody" parent="." unique_id=474284019 instance=ExtResource("5_4gfpu")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.816055, 1.0596641, -4.233996)
