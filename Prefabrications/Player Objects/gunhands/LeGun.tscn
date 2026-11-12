@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://nf6as0j1kgv2"]
+
+[ext_resource type="PackedScene" uid="uid://cer4tix8djuaf" path="res://Prefabrications/Player Objects/gunhands/revolver.glb" id="1_u41fc"]
+[ext_resource type="Script" uid="uid://dsv1cxxm00l23" path="res://Prefabrications/Player Objects/BulletDisplay.cs" id="2_26efi"]
+
+[node name="LeGun" type="Node3D" unique_id=1079462175]
+
+[node name="Sketchfab_Scene" parent="." unique_id=632579471 instance=ExtResource("1_u41fc")]
+transform = Transform3D(-1.7484556e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.7484556e-08, 0, 0, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=861436217]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1247618964]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer/Control" unique_id=1161456365]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+offset_right = 8.0
+grow_vertical = 0
+placeholder_text = ":("
+script = ExtResource("2_26efi")
